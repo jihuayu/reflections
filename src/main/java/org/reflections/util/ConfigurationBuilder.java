@@ -11,9 +11,7 @@ import org.reflections.ReflectionsException;
 import org.reflections.adapters.JavaReflectionAdapter;
 import org.reflections.adapters.JavassistAdapter;
 import org.reflections.adapters.MetadataAdapter;
-import org.reflections.scanners.Scanner;
-import org.reflections.scanners.SubTypesScanner;
-import org.reflections.scanners.TypeAnnotationsScanner;
+import org.reflections.scanners.*;
 import org.reflections.serializers.Serializer;
 import org.reflections.serializers.XmlSerializer;
 
@@ -53,7 +51,7 @@ public class ConfigurationBuilder implements Configuration {
     private boolean expandSuperTypes = true;
 
     public ConfigurationBuilder() {
-        scanners = Sets.<Scanner>newHashSet(new TypeAnnotationsScanner(), new SubTypesScanner());
+        scanners = Sets.<Scanner>newHashSet(new TypeAnnotationsScanner(), new SubTypesScanner(),new MethodAnnotationsScanner(),new FieldAnnotationsScanner(),new MethodParameterScanner());
         urls = Sets.newHashSet();
     }
 
