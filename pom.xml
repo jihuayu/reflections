@@ -62,15 +62,14 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
+            <version>27.1-jre</version>
         </dependency>
 
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
-            <version>${javassist.version}</version>
-            <optional>false
-            </optional> <!-- case: when not actually scanning with javassist or if using {@link Reflections.collect()} -->
+            <version>3.24.1-GA</version>
+            <optional>false</optional><!-- case: when not actually scanning with javassist or if using {@link Reflections.collect()} -->
         </dependency>
 
         <dependency>
